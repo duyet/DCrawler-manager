@@ -1,0 +1,19 @@
+{
+  "name": "A1-Project",
+  "version": "0.0.1",
+  "author": "Alpha Team",
+  "dependencies": {
+    "socket.io": "*",
+    "passport": "*",
+    "passport-twitter": "*",
+    "passport-facebook": "*",
+    "passport-google": "*",
+    "bcrypt": "*",
+    "express": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.12.x"
+  }
+}
