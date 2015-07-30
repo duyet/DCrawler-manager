@@ -2,8 +2,8 @@
 
 module.exports = {
 	app: {
-		title: 'Dsurvey',
-		description: 'Dsurvey',
+		title: 'DCrawler',
+		description: 'DCrawler',
 		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},
 	port: process.env.PORT || 3000,
@@ -16,7 +16,6 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/font-awesome/css/font-awesome.min.css',
 				'public/lib/angular-ui-select/dist/select.min.css',
-				'public/lib/textAngular/src/textAngular.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -31,8 +30,6 @@ module.exports = {
 				'public/lib/angular-ui-select/dist/select.min.js',
 				'public/lib/textAngular/dist/textAngular-rangy.min.js',
 				'public/lib/textAngular/dist/textAngular-sanitize.min.js',
-				'public/lib/textAngular/src/textAngularSetup.js',
-				'public/lib/textAngular/dist/textAngular.min.js'
 			]
 		},
 		css: [
