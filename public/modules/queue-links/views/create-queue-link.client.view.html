@@ -1,0 +1,61 @@
+<section class="container">
+    <section data-ng-controller="QueueLinksController">
+        <div class="page-header">
+            <h1>New Queue link</h1>
+        </div>
+        <div class="col-md-12">
+            <form class="form-horizontal" data-ng-submit="create()" novalidate>
+                    <div data-ng-show="error" class="alert alert-danger">
+                        <span data-ng-bind="error"></span>
+                    </div>
+
+                <fieldset>
+                    <div class="form-group">
+                        <label class="control-label" for="name">Link</label>
+                        <div class="controls">
+                            <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="name">From</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" aria-label="...">
+                                </div>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-md-4 col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label" for="name">To</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" aria-label="...">
+                                </div>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+
+
+                    <div class="form-group">
+                        <label class="control-label" for="name">Run now</label>
+                        <div class="controls">
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default">
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</section>

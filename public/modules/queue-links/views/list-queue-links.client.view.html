@@ -1,0 +1,62 @@
+<section class="container">
+    <section data-ng-controller="QueueLinksController" data-ng-init="find()">
+        <div class="page-header">
+            <h1>Queue links</h1>
+            <a href="/#!/queue-links/create" class="btn btn-primary">create one</a>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="list-group">
+                    <!-- data-ng-href="#!/queue-links/{{queueLink._id}}" -->
+                    <a data-ng-repeat="queueLink in queueLinks" class="list-group-item" style="border-left: 4px solid #1B809E; border-radius:0" data-ng-click="selectRow(queueLink)">
+            			<small class="list-group-item-text">
+            				Add on
+            				<span data-ng-bind="queueLink.created | date:'medium'"></span>
+            				by
+            				<span data-ng-bind="queueLink.user.displayName"></span>
+            			</small>
+            			<h4 class="list-group-item-heading" data-ng-bind="queueLink.name"></h4>
+                    </a>
+                </div>
+                <div class="alert alert-warning text-center" data-ng-hide="!queueLinks.$resolved || queueLinks.length">
+                	No Queue links yet, why don't you <a href="/#!/queue-links/create">create one</a>?
+                </div>
+            </div>
+
+            <div class="col-md-6" data-ng-show="rowSelected">
+                <table class="table table-hover">
+                    <tr>
+                        <td>ID</td>
+                        <td> <span class="label label-default">{{rowSelected._id}}</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Link</td>
+                        <td> {{rowSelected.name}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Created</td>
+                        <td> {{rowSelected.created}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Status</td>
+                        <td> <span class="label label-success">RUNNING</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Control</td>
+                        <td>
+                            <a class="label label-warning">Stop</a>
+                            <a href="#!/queue-links/{{rowSelected._id}}/edit" class="label label-primary">edit</a>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </section>
+</section>

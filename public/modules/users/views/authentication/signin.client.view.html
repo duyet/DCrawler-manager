@@ -3,8 +3,8 @@
 
 	<section id="login-form" class="auxiliary-form clearfix row">
 	    <header class="col-md-12"><h2>User Login</h2></header>
-	    <form class="col-md-6 login-comming-soon">
-	    	<div class="comming-soon-bg">Comming Soon</div>
+	    <form class="col-md-6" data-ng-submit="signin()">
+	    	
 	        <ul>
 	        	<li data-ng-show="error">
 					<div class="text-center alert alert-danger">
@@ -12,11 +12,11 @@
 					</div>
 	        	</li>
 	            <li>
-	                <input type="text" id="email" name="email" data-ng-model="credentials.username" tabindex="1" placeholder="Email" autocomplete="off" disabled>
+	                <input type="text" id="email" name="email" data-ng-model="credentials.username" tabindex="1" placeholder="Email" autocomplete="off" />
 	            </li>
 	            
 				<li>
-					<input type="password" id="password" name="password" data-ng-model="credentials.password" tabindex="2" placeholder="Password" autocomplete="off" disabled>
+					<input type="password" id="password" name="password" data-ng-model="credentials.password" tabindex="2" placeholder="Password" autocomplete="off" />
 				</li>
 
 	            <li class="remember-me-checkbox">
