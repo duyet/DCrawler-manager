@@ -1,0 +1,447 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic&subset=latin,latin-ext);
+
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local('OpenSans-Light'),url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(//fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'),local('OpenSans-Bold'),url(//fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff')}body,html{height:100%}body{background-color:#fff;color:#7e7f7f;font-family:Open Sans,Century Gothic}
+
+h3 {
+  font-size: 41px;
+  line-height: 36px;
+  font-weight: 400;
+  padding-left: 0;
+  margin: 20px 0;
+  text-transform: capitalize;
+  font-family: Lato;
+}
+
+h1, .h1 {
+	font-size: 36px;
+	color: #299abe;
+	font-weight: 800;
+}
+
+label {
+	font-weight: 300;
+}
+
+.navbar {
+	background: #59bcdb;
+	border-color: #59bcdb;
+	margin-bottom: 0;
+}
+
+.content {
+	margin: 0;
+}
+
+.navbar a.navbar-brand, ul.nav.navbar-nav li a  {
+	color: #ffffff !important;
+}
+
+.banner-home, .banner-home-bottom {
+	background-color: #59bcdb;
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 300px;
+}
+
+.banner-home .lead, .banner-home h1 {
+	  color: #fff;
+	  font-size: 40px;
+	  text-align: center;
+	  font-weight: 300;
+	  line-height: 55px;
+}
+
+.banner-home .lead {
+	margin-top: 50px;
+}
+
+.banner-home h1 {
+	font-weight: 700;
+	font-size: 64px;
+}
+
+.banner-home-bottom {
+	background-color: #299abe;
+	height: 100px;
+	text-align: center;
+}
+
+.banner-home-bottom p {
+	font-size: 30px;
+	padding-top: 25px;
+	font-weight: 300;
+}
+
+.head-title {
+  color: #8471b1;
+  border-bottom: 2px solid #8471b1;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  width: 990px;
+  margin: 30px auto 0;
+  height: 18px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 100%; */
+  margin-bottom: 28px;
+}
+
+.head-title > span {
+	  background-color: #fff;
+  padding: 0 30px;
+}
+
+section#question-designer {
+	background-image: url("../img/home/question_designer.png");
+}
+
+#feature-descriptions section:nth-child(odd) {
+  background-color: #8471b1;
+  color: #fff;
+}
+
+#feature-descriptions section:nth-child(odd) .feature-description {
+  float: right;
+}
+
+#feature-descriptions section#survey-editor {
+  background-image: url("../img/home/survey_editor.png");
+}
+
+#feature-descriptions section {
+  width: 100%;
+  margin: 0;
+  height: 575px;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.center-page {
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#feature-descriptions section .feature-description {
+  width: 495px;
+  padding-top: 125px;
+}
+
+#feature-descriptions section .feature-description h3 {
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+#feature-descriptions section:nth-child(even) h3 {
+  color: #59bcdb;
+}
+
+#feature-descriptions section .feature-description p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #37A3C5;
+}
+
+footer {
+	  width: 100%;
+	  background-image: -ms-linear-gradient(top,#f4f4f4 0%,#fff 25%);
+	  background-image: linear-gradient(to bottom,#f4f4f4 0%,#fff 25%);
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#f4f4f4,endColorstr=#FFFFFF,GradientType=0 );
+	  clear: both;
+	  padding: 30px 0;
+}
+
+#login-form {
+  position: relative;
+  padding: 0;
+  margin-top: 20px;
+}
+.auxiliary-form {
+  position: relative;
+  border: 2px solid #dff2ef;
+  border-radius: 3px;
+  background-color: #fafafa;
+  margin-bottom: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  padding: 0 0 15px;
+}
+.auxiliary-form header {
+  padding: 15px 0 !important;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+}
+.auxiliary-form header h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+}
+
+#login-form form {
+	border-right: 1px solid #e4e4e4;
+	margin: 0;
+	padding: 40px 80px;
+}
+#login-form ul {
+  padding: 0;
+}
+.auxiliary-form form ul {
+  padding: 50px;
+  border: none;
+}
+form ul li, form ol li {
+	overflow: visible !important;
+	margin: 10px 0;
+}
+textarea, input[type="text"], input[type="password"], input[type="select"], input[type="search"],  input[type="email"], select {
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #404040;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 15px 10px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.form-control {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.form-control:focus {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+#login-form .remember-me-checkbox {
+  padding-bottom: 30px;
+}
+label.radio, label.checkbox {
+  position: relative;
+  display: inline;
+  line-height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio input[type=radio], label.checkbox input[type=radio], label.radio input[type=checkbox], label.checkbox input[type=checkbox] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 20px;
+  width: 20px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  opacity: .001;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+label.radio .radio-button, label.checkbox .radio-button, label.radio .checkbox-button, label.checkbox .checkbox-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio .radio-button, label.checkbox .radio-button, label.radio .checkbox-button, label.checkbox .checkbox-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio .checkbox-button:after, label.checkbox .checkbox-button:after {
+  width: 10px;
+  height: 5px;
+  left: 4px;
+  top: 4px;
+  border: 3px solid #fff;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  -o-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+}
+label.radio .radio-button:after, label.checkbox .radio-button:after, label.radio .checkbox-button:after, label.checkbox .checkbox-button:after {
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  content: '';
+  position: absolute;
+  cursor: pointer;
+}
+form ul li .button, form ol li .button {
+  display: inline-block;
+}
+#login-form .col-md-6 {
+  margin: 0;
+  padding: 40px 80px;
+}
+#login-form ul {
+  padding: 0;
+  list-style: none;
+}
+nav ol li, nav ul li {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.social-button.twitter {
+  background-color: #00aced;
+}
+.social-button.twitter:hover {
+  background-color: #64d4ff;
+}
+a:visited, a:active, a:hover {
+  outline: none;
+}
+.social-button:hover {
+  color: #fff;
+}
+a:hover {
+  color: #8471b1;
+  text-decoration: none;
+}
+.social-button {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 293px;
+  height: 40px;
+  line-height: 39px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+.social-button .icon {
+  display: block;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+}
+.social-button.facebook {
+  background-color: #364c8e;
+}
+.social-button.facebook:hover {
+  background-color: #5771c0;
+}
+.social-button.google-plus {
+  background-color: #d03f2c;
+}
+.social-button.google-plus:hover {
+  background-color: #ff4c35;
+}
+#login-form #social_login li+li {
+  margin-top: 16px;
+}
+nav ol li, nav ul li {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+#login-form .or {
+  top: 230px;
+  left: 50%;
+}
+.or {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  margin: -27px 0 0 -27px;
+  display: block;
+  border-radius: 80px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  font-weight: 700;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #59BCDB;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #dff2ef;
+}
+
+.login-comming-soon {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.login-comming-soon .comming-soon-bg {
+  display: block;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #FFF;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  padding-top: 112px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2474B8;
+  border-color: #227FD0;
+  /* font-family: Lato; */
+  padding: 7px 29px;
+  border-radius: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-width: 2px;
+}
+
+.ta-root.focussed > .ta-scroll-window.form-control {
+  outline: 0;
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none;
+  box-shadow: none; 
+}
+.ta-root > .ta-scroll-window.form-control {
+  margin-top: 7px;
+}

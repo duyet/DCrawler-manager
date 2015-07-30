@@ -1,0 +1,35 @@
+<section class="container">
+	<section data-ng-controller="SurveysController" data-ng-init="findOne()">
+		<div class="page-header">
+			<h1 data-ng-bind="survey.name"></h1>
+		</div>
+
+		<div class="survey-desc">
+			<span data-ng-bind-html="survey.description"></span>
+		</div>
+
+		<div class="survey-action" data-ng-hide="((authentication.user) || (authentication.user._id == survey.user._id))">
+			<button type="button" class="btn btn-lg btn-success">Yes</button>
+			<button type="button" class="btn btn-lg btn-success">No</button>
+		</div>
+
+		<hr>
+
+		<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
+			<a class="btn btn-primary" href="/#!/surveys/{{survey._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i>
+			</a>
+			<a class="btn btn-primary" data-ng-click="remove();">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</div>
+		<small>
+			<em class="text-muted">
+				On
+				<span data-ng-bind="survey.created | date:'mediumDate'"></span>
+				by
+				<span data-ng-bind="survey.user.displayName"></span>
+			</em>
+		</small>
+	</section>
+</section>

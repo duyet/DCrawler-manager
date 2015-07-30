@@ -1,0 +1,57 @@
+<section class="container">
+<section  data-ng-controller="AuthenticationController">
+
+	<section id="login-form" class="auxiliary-form clearfix row">
+	    <header class="col-md-12"><h2>User Login</h2></header>
+	    <form class="col-md-6 login-comming-soon">
+	    	<div class="comming-soon-bg">Comming Soon</div>
+	        <ul>
+	        	<li data-ng-show="error">
+					<div class="text-center alert alert-danger">
+						<strong data-ng-bind="error"></strong>
+					</div>
+	        	</li>
+	            <li>
+	                <input type="text" id="email" name="email" data-ng-model="credentials.username" tabindex="1" placeholder="Email" autocomplete="off" disabled>
+	            </li>
+	            
+				<li>
+					<input type="password" id="password" name="password" data-ng-model="credentials.password" tabindex="2" placeholder="Password" autocomplete="off" disabled>
+				</li>
+
+	            <li class="remember-me-checkbox">
+	                <label for="remember" class="checkbox">
+	                    <input type="checkbox" id="remember" name="remember" value="remember">
+	                    <div class="checkbox-button"></div> Remember me</label>
+	            </li>
+
+	            <li>
+	                <button type="submit" tabindex="4" id="login-button" class="btn btn-primary btn-lg">Log in</button>
+
+	                <a href="/#!/password/forgot"title="Recover your password" id="password-recover-link" class="right">Forgot your password?</a>
+	            </li>
+	        </ul>
+	    </form>
+	    <div id="social_login" class="col-md-6">
+	        <nav>
+	            <ul>
+	                <li>
+	                    <a href="/auth/facebook" title="Facebook" class="social-button facebook">
+	                        <div class="icon sprite-facebook-24-white"></div>Log in with <strong>Facebook</strong></a>
+	                </li>
+	                <li>
+	                    <a href="/auth/twitter" title="Twitter" class="social-button twitter">
+	                        <div class="icon sprite-twitter-24-white"></div>Log in with <strong>Twitter</strong></a>
+	                </li>
+	                <li>
+	                    <a href="/auth/google" titel="Google Plus" class="social-button google-plus">
+	                        <div class="icon sprite-google-24-white"></div>Log in with <strong>Google +</strong></a>
+	                </li>
+	            </ul>
+	        </nav>
+	    </div>
+	</section>
+
+
+</section>
+</section>

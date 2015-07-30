@@ -1,8 +1,17 @@
-# DCrawler Manager
+Nodejs Kickstart Project 
+======================
 
-Manager page for DCrawler Project by @lvduit.
+Construct default for building website in Nodejs, MEAN stack. Power by Van-Duyet Le (http://duyetdev.com)
 
-# Timeline 
+
+Project Info 
+======================
+
+Project name: Nodejs-App-Kickstart
+
+Author: Van-Duyet Le
+
+Tech: Nodejs, AngularJs, MongoDB.
 
 # License
 

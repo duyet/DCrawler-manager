@@ -1,0 +1,34 @@
+<div class="container" data-ng-controller="HeaderController">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a href="/#!/" class="navbar-brand">Dsurvey</a>
+	</div>
+	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
+			<li class="divider-vertical"></li>
+			<li ui-route="/signin" ng-class="{active: $uiRoute}">
+				<a href="/#!/signin">Sign In</a>
+			</li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
+			<li>
+				<a href="/#!/surveys/create">Create</a>
+			</li>
+			<li>
+				<a href="/#!/surveys">My Survey</a>
+			</li>
+			<li>
+				<a href="/#!/settings/profile"><span data-ng-bind="authentication.user.displayName"></span></a>
+			</li>
+			<li>
+				<a href="/auth/signout">Signout</a>
+			</li>
+		</ul>
+	</nav>
+</div>
