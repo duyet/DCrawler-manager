@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/dsurvey-dev',
+	db: 'mongodb://localhost/DCrawler',
 	app: {
 		title: 'Dsurvey - Development Environment'
 	},
