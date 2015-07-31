@@ -13,6 +13,13 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var queueRoot = new QueueRoot(req.body);
+	var getUrlId = function(url) {
+		if (url == undefined) return '';
+		
+		return url.replace(/([^a-z0-9])|(^http)/gi, '');
+	};
+	
+	queueRoot.id = getUrlId(queueRoot.url || '');
 	queueRoot.user = req.user;
 
 	queueRoot.save(function(err) {
