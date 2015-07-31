@@ -9,12 +9,12 @@ angular.module('queue-roots').controller('QueueRootsController', ['$scope', '$st
 		$scope.create = function() {
 			// Create new Queue root object
 			var queueRoot = new QueueRoots ({
-				name: this.name
+				url: this.url
 			});
 
 			// Redirect after save
 			queueRoot.$save(function(response) {
-				$location.path('queue-roots/' + response._id);
+				$location.path('queue-roots');
 
 				// Clear form fields
 				$scope.name = '';
@@ -62,5 +62,13 @@ angular.module('queue-roots').controller('QueueRootsController', ['$scope', '$st
 				queueRootId: $stateParams.queueRootId
 			});
 		};
+		
+		// ========================
+		$scope.rowSelected = false;
+		$scope.selectRow = function(item) { $scope.rowSelected = item; }
+
+		$scope.getQueueLinkStatus = function() {
+			return false;
+		}
 	}
 ]);

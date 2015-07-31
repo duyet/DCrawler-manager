@@ -1,21 +1,23 @@
-<section data-ng-controller="QueueRootsController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1 data-ng-bind="queueRoot.name"></h1>
-	</div>
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == queueRoot.user._id))">
-		<a class="btn btn-primary" href="/#!/queue-roots/{{queueRoot._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="queueRoot.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="queueRoot.user.displayName"></span>
-		</em>
-	</small>
+<section class="container">
+	<section data-ng-controller="QueueRootsController" data-ng-init="findOne()">
+		<div class="page-header">
+			<h1 data-ng-bind="queueRoot.url"></h1>
+		</div>
+		<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == queueRoot.user._id))">
+			<a class="btn btn-primary" href="/#!/queue-roots/{{queueRoot._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i>
+			</a>
+			<a class="btn btn-primary" data-ng-click="remove();">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</div>
+		<small>
+			<em class="text-muted">
+				Posted on
+				<span data-ng-bind="queueRoot.created | date:'mediumDate'"></span>
+				by
+				<span data-ng-bind="queueRoot.user.displayName"></span>
+			</em>
+		</small>
+	</section>
 </section>

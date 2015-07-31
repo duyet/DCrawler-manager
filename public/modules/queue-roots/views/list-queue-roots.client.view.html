@@ -1,19 +1,72 @@
-<section data-ng-controller="QueueRootsController" data-ng-init="find()">
-    <div class="page-header">
-        <h1>Queue roots</h1>
-    </div>
-    <div class="list-group">
-        <a data-ng-repeat="queueRoot in queueRoots" data-ng-href="#!/queue-roots/{{queueRoot._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="queueRoot.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="queueRoot.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="queueRoot.name"></h4>
-        </a>
-    </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!queueRoots.$resolved || queueRoots.length">
-    	No Queue roots yet, why don't you <a href="/#!/queue-roots/create">create one</a>?
-    </div>
+<section class="container">
+    <section data-ng-controller="QueueRootsController" data-ng-init="find()">
+        <div class="page-header">
+            <h1>Site Managers</h1>
+            <a href="/#!/queue-roots/create" class="btn btn-primary">create one</a>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="list-group">
+                    <!-- data-ng-href="#!/queue-roots/{{queueLink._id}}" -->
+                    <a data-ng-repeat="queueLink in queueRoots" class="list-group-item" 
+                        style="border-left: 4px solid {{ queueLink.status == 1 ? '#1B809E' : '' }}; border-radius:0" 
+                        data-ng-click="selectRow(queueLink)">
+            			<small class="list-group-item-text">
+            				Add on
+            				<span data-ng-bind="queueLink.created | date:'medium'"></span>
+            				by
+            				<span data-ng-bind="queueLink.user.displayName"></span>
+            			</small>
+            			<h4 class="list-group-item-heading" data-ng-bind="queueLink.url"></h4>
+                    </a>
+                </div>
+                <div class="alert alert-warning text-center" data-ng-hide="!queueRoots.$resolved || queueRoots.length">
+                	No Queue links yet, why don't you <a href="/#!/queue-roots/create">create one</a>?
+                </div>
+            </div>
+
+            <div class="col-md-6" data-ng-show="rowSelected">
+                <table class="table table-hover">
+                    <tr>
+                        <td>ID</td>
+                        <td> <span class="label label-default">{{rowSelected._id}}</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Link</td>
+                        <td> {{rowSelected.url}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Created</td>
+                        <td> {{rowSelected.created}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Last run</td>
+                        <td> {{rowSelected.last_run}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <span class="label label-success" data-ng-show="rowSelected.status == 1">running</span>
+                            <span class="label label-error" data-ng-show="rowSelected.status != 1">stop</span> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Control</td>
+                        <td>
+                            <a class="label label-warning">Stop</a>
+                            <a href="#!/queue-roots/{{rowSelected._id}}/edit" class="label label-primary">edit</a>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </section>
 </section>
