@@ -35,7 +35,10 @@
 
                     <tr>
                         <td>Link</td>
-                        <td> {{rowSelected.url}}</td>
+                        <td>
+                            <span class="label label-success" data-ng-show="rowSelected.status == 1">running</span>
+                            <span class="label label-error" data-ng-show="rowSelected.status != 1">stop</span>
+                            {{rowSelected.url}}</td>
                     </tr>
 
                     <tr>
@@ -47,15 +50,7 @@
                         <td>Last run</td>
                         <td> {{rowSelected.last_run}}</td>
                     </tr>
-
-                    <tr>
-                        <td>Status</td>
-                        <td>
-                            <span class="label label-success" data-ng-show="rowSelected.status == 1">running</span>
-                            <span class="label label-error" data-ng-show="rowSelected.status != 1">stop</span> 
-                        </td>
-                    </tr>
-
+                    
                     <tr>
                         <td>Control</td>
                         <td>

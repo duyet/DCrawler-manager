@@ -8,6 +8,7 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				'public/lib/font-awesome/css/font-awesome.min.css',
 				'public/lib/angular-ui-select/dist/select.min.css',
+				'public/lib/ng-table/dist/ng-table.min.css'
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -22,6 +23,10 @@ module.exports = {
 				'public/lib/angular-ui-select/dist/select.min.js',
 				'public/lib/textAngular/dist/textAngular-rangy.min.js',
 				'public/lib/textAngular/dist/textAngular-sanitize.min.js',
+				'public/lib/api-check/dist/api-check.min.js',
+				'public/lib/angular-formly/dist/formly.min.js',
+				'public/lib/ng-table/dist/ng-table.min.js',
+				'public/lib/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js'
 			]
 		},
 		css: 'public/dist/application.min.css',
