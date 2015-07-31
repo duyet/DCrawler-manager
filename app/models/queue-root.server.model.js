@@ -10,11 +10,19 @@ var mongoose = require('mongoose'),
  * Queue root Schema
  */
 var QueueRootSchema = new Schema({
-	name: {
+	id: {
+		type: String, 
+		index: {unique: true}
+	},
+	url: {
 		type: String,
 		default: '',
 		required: 'Please fill Queue root name',
 		trim: true
+	},
+	status : { 
+		type: Number, 
+		default: 1 
 	},
 	created: {
 		type: Date,
@@ -23,6 +31,10 @@ var QueueRootSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
+	},
+	last_run: {
+		type: Date,
+		default: Date.now
 	}
 });
 
