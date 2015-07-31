@@ -13,8 +13,7 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var urlInProcess = new UrlInProcess(req.body);
-	urlInProcess.user = req.user;
-
+	
 	urlInProcess.save(function(err) {
 		if (err) {
 			return res.status(400).send({
@@ -72,61 +71,22 @@ exports.delete = function(req, res) {
 /**
  * List of Url in processes
  */
-exports.list = function(req, res) {
-
-	var sort;
-	var sortObject = {};
-	var count = req.query.count || 5;
-	var page = req.query.page || 1;
-
-
-	var filter = {
-		filters : {
-			mandatory : {
-				contains: req.query.filter
-			}
+exports.list = function(req, res) { 
+	UrlInProcess.find().sort('-created').populate('user', 'displayName').exec(function(err, urlInProcesses) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(urlInProcesses);
 		}
-	};
-
-	var pagination = {
-		start: (page - 1) * count,
-		count: count
-	};
-
-	if (req.query.sorting) {
-		var sortKey = Object.keys(req.query.sorting)[0];
-		var sortValue = req.query.sorting[sortKey];
-		sortObject[sortValue] = sortKey;
-	}
-	else {
-		sortObject.desc = '_id';
-	}
-
-	sort = {
-		sort: sortObject
-	};
-
-
-	UrlInProcess
-		.find()
-		.filter(filter)
-		.order(sort)
-		.page(pagination, function(err, urlInProcesses){
-			if (err) {
-				return res.status(400).send({
-					message: errorHandler.getErrorMessage(err)
-				});
-			} else {
-				res.jsonp(urlInProcesses);
-			}
-		});
-
+	});
 };
 
 /**
  * Url in process middleware
  */
-exports.urlInProcessByID = function(req, res, next, id) {
+exports.urlInProcessByID = function(req, res, next, id) { 
 	UrlInProcess.findById(id).populate('user', 'displayName').exec(function(err, urlInProcess) {
 		if (err) return next(err);
 		if (! urlInProcess) return next(new Error('Failed to load Url in process ' + id));

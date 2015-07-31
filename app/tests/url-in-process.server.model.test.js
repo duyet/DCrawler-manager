@@ -56,10 +56,9 @@ describe('Url in process Model Unit Tests:', function() {
 	});
 
 	afterEach(function(done) { 
-		UrlInProcess.remove().exec(function(){
-			User.remove().exec(function(){
-				done();	
-			});
-		});
+		UrlInProcess.remove().exec();
+		User.remove().exec();
+
+		done();
 	});
 });

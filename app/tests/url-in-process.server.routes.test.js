@@ -261,10 +261,8 @@ describe('Url in process CRUD tests', function() {
 	});
 
 	afterEach(function(done) {
-		User.remove().exec(function(){
-			UrlInProcess.remove().exec(function(){
-				done();
-			});	
-		});
+		User.remove().exec();
+		UrlInProcess.remove().exec();
+		done();
 	});
 });

@@ -10,7 +10,13 @@ var mongoose = require('mongoose'),
  * Url in process Schema
  */
 var UrlInProcessSchema = new Schema({
-	name: {
+	id: String, 
+	root_id: String, 
+	seen: {
+		type: Boolean, 
+		default: false
+	},
+	url: {
 		type: String,
 		default: '',
 		required: 'Please fill Url in process name',
@@ -19,10 +25,6 @@ var UrlInProcessSchema = new Schema({
 	created: {
 		type: Date,
 		default: Date.now
-	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
 	}
 });
 

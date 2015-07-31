@@ -1,36 +1,22 @@
 <section class="container">
-    <section data-ng-controller="UrlInProcessesController">
+    <section data-ng-controller="UrlInProcessesController" data-ng-init="find()">
         <div class="page-header">
             <h1>Url in processes</h1>
+            <a href="/#!/url-in-processes/create" class="btn btn-primary">create one</a>
         </div>
-    
-        <div class="pull-right">
-          <a type="button" class="btn btn-success" href="/#!/url-in-processes/create">
-            <i class="glyphicon glyphicon-open"></i> New UrlInProcess
-          </a>
+        <div class="list-group">
+            <a data-ng-repeat="urlInProcess in urlInProcesses" data-ng-href="#!/url-in-processes/{{urlInProcess._id}}" class="list-group-item">
+    			<small class="list-group-item-text">
+    				Posted on
+    				<span data-ng-bind="urlInProcess.created | date:'medium'"></span>
+    				by
+    				<span data-ng-bind="urlInProcess.user.displayName"></span>
+    			</small>
+    			<h4 class="list-group-item-heading" data-ng-bind="urlInProcess.name"></h4>
+            </a>
         </div>
-    
-        <div>
-            <table ng-table="tableParams" show-filter="true">
-                <tr ng-repeat="urlInProcess in $data">
-                    <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">{{urlInProcess.name}}</td>
-                    <td>
-                        <div class="table-actions">
-                    <td>
-                       <div class="table-actions">
-                            <a class="btn btn-default" title="View" href="/#!/url-in-processes/{{urlInProcess._id}}">
-                                <span class="glyphicon glyphicon-eye-open"></span>
-                            </a>
-                            <a class="btn btn-default" title="Edit" href="/#!/url-in-processes/{{urlInProcess._id}}/edit">
-                                <span class="glyphicon glyphicon-edit"></span>
-                            </a>
-                            <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(urlInProcess)" item="urlInProcess">
-                      				<span class="glyphicon glyphicon-remove-circle"></span>
-                      			</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+        <div class="alert alert-warning text-center" data-ng-hide="!urlInProcesses.$resolved || urlInProcesses.length">
+        	No Url in processes yet, why don't you <a href="/#!/url-in-processes/create">create one</a>?
         </div>
     </section>
 </section>

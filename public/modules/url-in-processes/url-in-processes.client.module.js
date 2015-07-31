@@ -1,4 +1,4 @@
 'use strict';
 
-// Use application configuration module to register a new module
-ApplicationConfiguration.registerModule('url-in-processes', ['core']);
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('url-in-processes');

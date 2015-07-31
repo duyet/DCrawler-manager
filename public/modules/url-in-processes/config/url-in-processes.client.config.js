@@ -1,6 +1,6 @@
 'use strict';
 
-// Configuring the new module
+// Configuring the Articles module
 angular.module('url-in-processes').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
